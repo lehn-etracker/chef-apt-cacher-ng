@@ -1,13 +1,10 @@
-# Will install and enable APT-Cacher-NG immediately,
-# hopefully making most
+# Will install and enable Apt-Cacher-NG immediately
+# if compiletime is set to true. Otherwise, it will be
+# unavailable until the 2nd Chef run.
 
 default['apt-cacher-ng']['compiletime'] = true
 
 default['apt-cacher-ng']['ipaddress'] = '127.0.0.1'
-
-default['apt-cacher-ng']['remappings'] = {
-
-}
 
 default['apt-cacher-ng']['config']['cachedir'] =  '/var/cache/apt-cacher-ng'
 default['apt-cacher-ng']['config']['logdir'] = '/var/log/apt-cacher-ng'
