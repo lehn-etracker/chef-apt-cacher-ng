@@ -1,0 +1,20 @@
+# APT-Cacher-NG configuration file
+# This file was automatically generated and dropped off by chef!
+# Please refer to the APT-Cacher-NG documentation for details on
+# configuration settings.
+
+<% node['apt-cacher-ng']['config'].sort.each do |key, value| %>
+<% next if value.nil? -%>
+<%= key %> = <%=
+  case value
+  when String
+    "'#{value}'"
+  when TrueClass
+    '1'
+  when FalseClass
+    '0'
+  else
+    value
+  end
+%>
+<% end %>
