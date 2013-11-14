@@ -17,7 +17,7 @@ peice of software, it belongs in its own cookbook, don't you think?
 
 Add the following to your Berksfile or Cheffile.
 
-`cookbook 'apt-cacher-ng', git: 'https://github.com/markolson/apt-cacher-ng.git'`
+`cookbook 'apt-cacher-ng', git: 'https://github.com/markolson/chef-apt-cacher-ng.git'`
 
 It will not be available through the Opscode Community.
 
