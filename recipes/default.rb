@@ -6,7 +6,7 @@ acng_service = package 'apt-cacher-ng' do
 end
 acng_service.run_action(:install) if node['apt-cacher-ng']['compiletime']
 
-d = directory node['apt']['cacher_dir'] do
+d = directory node['apt-cacher-ng']['config']['cachedir'] do
   action(node['apt-cacher-ng']['compiletime'] ? :nothing : :create)
   owner "apt-cacher-ng"
   group "apt-cacher-ng"
