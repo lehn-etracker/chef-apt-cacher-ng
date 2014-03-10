@@ -6,6 +6,11 @@ default['apt-cacher-ng']['compiletime'] = true
 
 default['apt-cacher-ng']['ipaddress'] = '127.0.0.1'
 
+# See apt-cacher-ng documentation about repository remapping
+# remaps follow the pattern
+# 'uburep' => 'file:ubuntu_mirrors /ubuntu ; file:backends_ubuntu # Ubuntu Archives'
+default['apt-cacher-ng']['remaps'] = {}
+
 default['apt-cacher-ng']['config']['cachedir'] =  '/var/cache/apt-cacher-ng'
 default['apt-cacher-ng']['config']['logdir'] = '/var/log/apt-cacher-ng'
 default['apt-cacher-ng']['config']['support_dir'] = nil

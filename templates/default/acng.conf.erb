@@ -3,6 +3,11 @@
 # Please refer to the Apt-Cacher NG documentation for details on
 # configuration settings.
 
+<% node['apt-cacher-ng']['remaps'].sort.each do |reponame, mapping| %>
+<% next if mapping.nil? -%>
+Remap-<%= reponame %>: <%= mapping %>
+<% end %>
+
 <% node['apt-cacher-ng']['config'].sort.each do |key, value| %>
 <% next if value.nil? -%>
 <%= key %> = <%=
